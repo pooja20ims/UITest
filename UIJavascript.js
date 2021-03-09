@@ -29,9 +29,12 @@
 
         if (User != "" && sortBy == "") {  
             console.log("filtered  By "+User)
+            
             let bigCities = acctData
             .filter(acc => acc.user === User)           
-            .map(acc => console.log(acc.acctNum));
+            .map(acc => acc.acctNum);
+            console.log(bigCities);
+            
         }     
 
         if (sortBy != '' && User=="") {  
@@ -48,7 +51,8 @@
         let sortedbyBalance = NewArray
                 .filter(acc => acc.user === User)
             .sort((c1, c2) => c1.balance - c2.balance)
-                .map(acc => console.log(acc.acctNum));
+                .map(acc => acc.acctNum);
+             console.log(sortedbyBalance);
     }
     }
 </script>
